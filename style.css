@@ -47,10 +47,10 @@ body {
 
 .pip-window {
     position: absolute;
-    bottom: 190px;
+    bottom: 180px;
     left: 10px;
-    width: 220px;
-    height: 240px;
+    width: 300px;
+    height: 250px;
     background-color: black;
     color: #ff6b6b;
     display: flex;
