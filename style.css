@@ -1,0 +1,142 @@
+/* Βασικές ρυθμίσεις σελίδας */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4edd9; /* Το μπεζ φόντο της εικόνας */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Πάνω ενότητα: Βίντεο αριστερά, Chat δεξιά */
+.top-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Περιοχή Κύριου Βίντεο */
+.video-area {
+    flex: 3; /* Παίρνει τα 3/4 του χώρου */
+    background-color: #666;
+    color: white;
+    min-height: 400px;
+    position: relative;
+    border: 2px solid #333;
+}
+
+.main-stream {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.time-stamp {
+    align-self: flex-end;
+    font-size: 1.2rem;
+}
+
+/* Μικρό εσωτερικό παράθυρο (Picture-in-Picture) */
+.pip-window {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    width: 180px;
+    height: 120px;
+    background-color: black;
+    border: 2px solid #99eb34; /* Πράσινο περίγραμμα */
+    color: #ff6b6b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+/* Περιοχή Chat / Events */
+.chat-area {
+    flex: 1; /* Παίρνει το 1/4 του χώρου */
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #512da8; /* Μοβ τίτλος */
+    color: #ffb74d;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-logs {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.log-item {
+    font-size: 0.85rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.log-time {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Κάτω ενότητα: Τα κουτάκια των χρηστών */
+.users-section {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.user-box {
+    flex: 1;
+    background-color: #eee9d7;
+    border-top: 2px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    color: #a04040; /* Κοκκινωπό χρώμα γραμματοσειράς */
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE ΣΧΕΔΙΑΣΜΟΣ ΓΙΑ ΚΙΝΗΤΑ */
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column; /* Το chat πηγαίνει κάτω από το βίντεο */
+    }
+    
+    .users-section {
+        flex-direction: column; /* Οι χρήστες στοιχίζονται κάθετα */
+    }
+    
+    .pip-window {
+        width: 120px;
+        height: 80px;
+        font-size: 0.75rem;
+    }
+}
