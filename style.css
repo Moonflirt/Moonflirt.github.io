@@ -114,6 +114,17 @@ body {
     font-size: 0.9rem;
 }
 
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+    width: 800px;
+    height: 600px;
+}
+
 /* RESPONSIVE ΣΧΕΔΙΑΣΜΟΣ ΓΙΑ ΚΙΝΗΤΑ */
 @media (max-width: 768px) {
     .top-section {
@@ -124,9 +135,4 @@ body {
         flex-direction: column; /* Οι χρήστες στοιχίζονται κάθετα */
     }
     
-    .pip-window {
-        width: 120px;
-        height: 80px;
-        font-size: 0.75rem;
-    }
 }
